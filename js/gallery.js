@@ -71,8 +71,13 @@ function handlerClicFunction(event) {
   if (event.target.nodeName !== 'IMG') {
     return;
   }
-
   const bigImageUrl = event.target.dataset.source;
   console.log(bigImageUrl);
 }
 galleryElem.addEventListener('click', handlerClicFunction);
+
+const instance = basicLightbox.create(`
+    <img src="assets/images/image.png" width="800" height="600">
+`);
+
+instance.show();
