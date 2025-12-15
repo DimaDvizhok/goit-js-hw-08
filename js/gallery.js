@@ -77,6 +77,7 @@ function handlerClicFunction(event) {
     const instance = basicLightbox.create(`
     <img src="${bigImageUrl}" width="1112" height="640">`);
 
+    //закриття модалки по натисканню Escape
     const handleEscapeClick = event => {
         if (event.code === 'Escape') {
             instance.close(() => {
